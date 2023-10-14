@@ -1,0 +1,132 @@
+.header__root {
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 70px;
+  padding: 14px var(--margin-x);
+  box-shadow: 1px 4px 18px #8e8a8a13;
+  box-shadow: 1px 4px 18px #8e8a8a37;
+  border-bottom: 1px solid #c7c5c556;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.header__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+@media (max-width: 340px) {
+  .header__title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 313px) {
+  .header__title {
+    font-size: 18px;
+  }
+}
+
+.displayPopupBtn__root {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #c7c5c57a;
+  background: #faf9f9;
+  padding: 5px 6px 5px 8px;
+  transition: 0.25s ease-in-out;
+  color: #151515;
+  fill: #000000a6;
+}
+
+.displayPopupBtn__root:hover {
+  box-shadow: 7px 4px 20px #c7c5c57a;
+  transform: scale(1.02);
+}
+
+.displayPopupBtn__root.open {
+  box-shadow: 7px 4px 20px #c7c5c57a;
+  transform: scale(1.02);
+}
+
+.displayPopupBtn__text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.displayPopup__root {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.displayPopup__backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.open .displayPopup__backdrop {
+  display: flex;
+}
+
+.displayPopup__content {
+  background-color: #f8f9fb;
+  width: 240px;
+  border-radius: 8px;
+  border: 1px solid #c7c5c57a;
+  padding: 15px 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 1px 4px 18px #8e8a8a4c;
+  position: absolute;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+
+.displayPopup__contentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.displayPopup__contentLabel {
+  font-size: 15px;
+  font-weight: 500;
+  color: #636363;
+}

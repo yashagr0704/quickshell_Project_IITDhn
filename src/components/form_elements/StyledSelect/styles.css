@@ -1,0 +1,134 @@
+.selectBtn__root {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #c7c5c57a;
+  background: #faf9f9;
+  padding: 5px 6px 5px 8px;
+  transition: 0.25s ease-in-out;
+  color: #151515;
+  fill: #000000a6;
+}
+
+.selectBtn__root:hover {
+  box-shadow: 7px 4px 20px #c7c5c57a;
+  transform: scale(1.02);
+}
+
+.selectBtn__root.open {
+  box-shadow: 7px 4px 20px #c7c5c57a;
+  transform: scale(1.02);
+}
+
+.selectBtn__text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.selectPopup__root {
+  /* position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: blue; */
+  /* position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: blue; */
+}
+
+.selectPopup__backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e9000000;
+  background-color: #fa0c0cc7;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  /* box-sizing: border-box;
+  box-sizing: content-box;
+  box-sizing: unset; */
+}
+
+.open .selectPopup__backdrop {
+  display: flex;
+}
+
+.selectPopup__content {
+  background-color: #f8f9fb;
+  width: 300px;
+  /* height: 100px; */
+  border-radius: 8px;
+  border: 1px solid #c7c5c57a;
+  padding: 15px 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 1px 4px 18px #8e8a8a4c;
+  position: absolute;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+
+.styledSelect__root {
+  font-size: 15px;
+  font-weight: 500;
+  color: #5c5c5c;
+  border: 1px solid #c7c5c57a;
+  border-radius: 8px;
+  padding: 5px 10px;
+  padding-right: 0px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  outline: 0;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(92, 92, 92)" height="24" viewBox="0 -960 960 960" width="24"><path d="M480.1-364.5q-7.6 0-14.35-2.75t-12.25-8.25L272.331-556.669Q261.5-567.5 261.5-583t11-26.5q11-11 26.5-11t26.401 10.901L480-455l154.599-154.599Q645.5-620.5 661-620.5t26.5 11q11 11 11 26.5t-10.831 26.331L506.5-375.5q-5.5 5.5-12.15 8.25t-14.25 2.75Z" /></svg>');
+}
+.styledSelect__root:focus {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="rgb(92, 92, 92)"><path d="M480-530 325.401-375.401Q314.5-364.5 299-364.5t-26.5-11q-11-11-11-26.5t10.831-26.331L453.5-609.5q5.5-5.5 12.15-8.25t14.25-2.75q7.6 0 14.35 2.75t12.25 8.25l181.169 181.169Q698.5-417.5 698.5-402t-11 26.5q-11 11-26.5 11t-26.401-10.901L480-530Z"/></svg>');
+}
+
+.styledSelect__option {
+  min-height: 15px;
+  height: 15px;
+  color: #000000;
+  border: 0px;
+  border-radius: 0px;
+  font-size: 14px;
+  margin-top: 10px;
+  display: flex;
+  white-space-collapse: preserve;
+  text-wrap: nowrap;
+}

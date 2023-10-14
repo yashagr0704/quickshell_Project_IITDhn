@@ -1,0 +1,121 @@
+.displayBoard__root {
+  --margin-x: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f5f8;
+  color: rgba(0, 0, 0, 0.87);
+}
+@media (max-width: 720px) {
+  .displayBoard__root {
+    --margin-x: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .displayBoard__root {
+    --margin-x: 13px;
+  }
+}
+
+.displayBoard__body {
+  margin-top: 45px;
+  width: 100vw;
+  height: calc(100vh - 45px);
+  overflow: auto;
+  padding: 0px calc(var(--margin-x) + 5px);
+}
+
+.displayBoard__main {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  min-width: 1740px;
+  height: auto;
+}
+
+.displayBoard__section {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 10px;
+  margin-top: 45px;
+  min-height: calc(100vh - 140px);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 370px) {
+  .displayBoard__section {
+    width: calc(100vw - 35px);
+  }
+}
+
+.displayBoard__sectionContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  gap: 10px;
+  background: #8e8a8a11;
+}
+
+.displayBoard__sectionContentEmpty {
+  font-size: 20px;
+  font-weight: 500;
+  margin: auto;
+  color: #a0a0a0;
+}
+
+.displayBoard__sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.displayBoard__sectionTitle {
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.displayBoard__sectionHeaderLength {
+  font-size: 16px;
+  color: #8e8a8a;
+}
+
+.displayBoard__sectionHeaderUserAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #c7c5c57a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.displayBoard__sectionHeaderButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.displayBoard__sectionHeaderButton:hover {
+  background: #dddedf;
+}
+
+.displayBoard__sectionHeaderButton:first-of-type {
+  margin-left: auto;
+}
